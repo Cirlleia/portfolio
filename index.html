@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Meu Portfólio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- Cabeçalho fixo com menu -->
+  <header>
+    <h1>👩🏻‍💻 Cirleia Souza</h1>
+    <nav>
+      <button onclick="mostrar('inicio')">Início</button>
+      <button onclick="mostrar('sobre')">Sobre</button>
+      <button onclick="mostrar('formacao')">Formação</button>
+      <button onclick="mostrar('projetos')">Projetos</button>
+      <button onclick="mostrar('contato')">Contato</button>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main>
+
+    <!-- Seção Início -->
+    <section id="inicio" class="visivel">
+      <h2>Bem-vindo ao meu portfólio!</h2>
+      <p>Este site foi desenvolvido com HTML, CSS e JavaScript. Aqui compartilho minha jornada, projetos e formas de contato.</p>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre">
+      <h2>Sobre Mim</h2>
+      <p> Meu nome é Cirleia, tenho 36 anos e sou servidora pública municipal. Atualmente, estou em processo de transição de carreira, direcionando meus passos para a área da tecnologia. Estou no primeiro semestre do curso de Análise e Desenvolvimento de Sistemas, e cada novo aprendizado tem reforçado minha escolha.
+        Sou curiosa, criativa e motivada por desafios que impulsionam o crescimento pessoal e profissional. Acredito no poder do conhecimento como ferramenta de transformação e estou sempre em busca de evolução.
+        Entre meus hobbies estão a leitura, os trabalhos manuais e o contato com a natureza, que me proporcionam equilíbrio e inspiração. Também valorizo muito os bons momentos em família e com amigos, pois acredito que eles são essenciais para uma vida leve e significativa.</p>
+    </section>
+
+    <!-- Seção Formação -->
+    <section id="formacao">
+      <h2>Formação</h2>
+      <ul>
+        <li><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas</li>
+        <li><strong>Instituição:</strong> UNINTER</li>
+        <hr style="color: pink; height: 1px;">
+        <li><strong>Curso:</strong> MBA em Administração Estratégica</li>
+        <li><strong>Instituição:</strong> Univiçosa</li>
+        <hr style="color: pink; height: 1px;">
+        <li><strong>Curso:</strong> Economia Doméstica</li>
+        <li><strong>Instituição:</strong> Universidade Federal de Viçosa</li>
+        <hr style="color: pink; height: 1px;">
+        <li><strong>Idiomas:</strong> Português (nativo), Inglês (intermediário)</li>
+      </ul>
+    </section>
+
+    <!-- Seção Projetos -->
+    <section id="projetos">
+      <h2>Projetos</h2>
+      <div class="grid-projetos">
+        <div class="card">
+          <h3>🧮 Calculadora</h3>
+          <p>Projeto em Python com operação básica.</p>
+          <a href="https://github.com/Cirlleia/calculadora-python-cli" target="_blank">Ver no GitHub</a>
+        </div>
+        <div class="card">
+          <h3>🔐 Gerador de Senhas</h3>
+          <p>Gera senhas aleatórias com segurança e praticidade.</p>
+          <a href="https://github.com/Cirlleia/Gerador-de-Senha" target="_blank">Ver no GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato">
+      <h2>Fale Comigo</h2>
+      <div class="contato-unico">
+        <p class="texto-contato">Vamos conversar? Preencha o formulário abaixo para entrar em contato comigo! 😊</p>
+        <form class="form-contato-unico" onsubmit="enviarMensagem(event)">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" placeholder="Seu nome" required />
+    
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="seu@email.com" required />
+    
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" placeholder="Digite sua mensagem..." rows="6" required></textarea>
+    
+          <button type="submit">Enviar Mensagem</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer>
+    <p>© 2025 - Desenvolvido por Cirleia Souza</p>
+  </footer>
+ 
+   <!-- Botão de modo escuro/claro -->
+  <button id="botao-tema" onclick="alternarTema()">🌓</button>
+
+  <script src="js/script.js"></script>
+
+ 
+</body>
+</html>
+
+
+
+

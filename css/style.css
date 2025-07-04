@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(to right, #fdf0f6, #fff6fb);
+  margin: 0;
+  padding: 0;
+  color: #2c3e50;
+}
+
+/* Cabeçalho fixo */
+header {
+  background: linear-gradient(to right, #e3429b, purple); /* Gradiente horizontal de rosa para roxo */
+  color: white;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Menu */
+nav {
+  margin-top: 10px;
+}
+nav button {
+  background: white;
+  color: #e3429b;
+  border: 2px solid #e3429b;
+  font-size: 16px;
+  margin: 0 5px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+nav button:hover {
+  background-color: #e3429b;
+  color: white;
+}
+
+/* Conteúdo principal */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: rgb(238, 196, 232);
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  text-align: justify
+}
+
+/* Seções */
+section {
+  display: none;
+}
+section.visivel {
+  display: block;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Formulário Contato */
+.contato-unico {
+  max-width: 600px;
+  margin: 30px auto;
+  background-color: #fff0f7;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.texto-contato {
+  text-align: center;
+  font-style: italic;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+.form-contato-unico {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-contato-unico label {
+  font-weight: bold;
+  color: #e3429b;
+}
+
+.form-contato-unico input,
+.form-contato-unico textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  resize: vertical;
+}
+
+.form-contato-unico input:focus,
+.form-contato-unico textarea:focus {
+  border-color: #e3429b;
+  outline: none;
+  box-shadow: 0 0 5px rgba(227, 66, 155, 0.3);
+}
+
+.form-contato-unico button {
+  background-color: #e3429b;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background 0.3s ease;
+}
+
+.form-contato-unico button:hover {
+  background-color: #c52b82;
+}
+
+/* Cards Projetos */
+.grid-projetos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff0f7;
+  border: 2px solid #e3429b;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+}
+.card h3 {
+  color: #e3429b;
+}
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: white;
+  background: #e3429b;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.card a:hover {
+  background: #c52b82;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to right, #e3429b, purple); /* Gradiente horizontal de rosa para roxo */
+  color: white;
+  margin-top: 60px;
+  font-size: 14px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  nav button {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+  }
+  main {
+    margin: 20px 10px;
+    padding: 20px;
+  }
+}
+
+#botao-tema {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #e3429b;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+/* Estilo modo escuro */
+body.modo-escuro {
+  background: #121212;
+  color: #ddd;
+}
+
+body.modo-escuro header {
+  background-color: #4a1c3a;
+  color: #f1c1d1;
+  box-shadow: none;
+}
+
+body.modo-escuro nav button {
+  background: #4a1c3a;
+  color: #f1c1d1;
+  border-color: #f1c1d1;
+}
+
+body.modo-escuro nav button:hover {
+  background-color: #f1c1d1;
+  color: #4a1c3a;
+}
+
+body.modo-escuro main {
+  background-color: #222;
+  box-shadow: none;
+}
+
+body.modo-escuro .contato-unico {
+  background-color: #331c2c;
+  box-shadow: none;
+}
+
+body.modo-escuro .form-contato-unico input,
+body.modo-escuro .form-contato-unico textarea {
+  background-color: #444;
+  color: #eee;
+  border-color: #666;
+}
+
+body.modo-escuro .form-contato-unico input:focus,
+body.modo-escuro .form-contato-unico textarea:focus {
+  border-color: #f1c1d1;
+  box-shadow: 0 0 5px rgba(241, 193, 209, 0.7);
+}
+
+body.modo-escuro .form-contato-unico button {
+  background-color: #f1c1d1;
+  color: #4a1c3a;
+}
+
+body.modo-escuro .form-contato-unico button:hover {
+  background-color: #d9a9bb;
+}
+
+body.modo-escuro .card {
+  background: #331c2c;
+  border-color: #f1c1d1;
+  box-shadow: none;
+}
+
+body.modo-escuro .card h3,
+body.modo-escuro .card a {
+  color: #f1c1d1;
+}
+
+body.modo-escuro .card a {
+  background: #4a1c3a;
+}
+
+body.modo-escuro .card a:hover {
+  background: #d9a9bb;
+}
+
+body.modo-escuro footer {
+  background-color: #4a1c3a;
+  color: #f1c1d1;
+}
+
+
+
